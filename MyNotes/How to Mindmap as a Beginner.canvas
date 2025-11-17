@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"76c97e3620df6b5d","type":"text","text":"# How to Mindmap as a Beginner","x":-200,"y":-60,"width":280,"height":100},
+		{"id":"06847f98fafc31ed","x":230,"y":-480,"width":320,"height":280,"type":"text","text":"## Rào cản 1: Không tin tưởng vào não bộ\nNhiều người có thói quen ghi chép liên tục khi nghe giảng hoặc đọc sách, giống như một \"máy photocopy\" [01:23](http://www.youtube.com/watch?v=gLHqVR6VDUg&t=83). Điều này xảy ra vì họ không tin não mình có khả năng lưu giữ, xử lý và tổng hợp thông tin trước khi viết ra [02:04](http://www.youtube.com/watch?v=gLHqVR6VDUg&t=124)."},
+		{"id":"8cd8107f4bfd7c70","x":230,"y":180,"width":320,"height":300,"type":"text","text":"## Rào cản 2: Niềm tin rằng \"Ghi nhiều là tốt\"\nĐây là một rào cản lớn khác [13:31](http://www.youtube.com/watch?v=gLHqVR6VDUg&t=811). Việc ghi chép chi tiết, dài dòng mang lại cảm giác an toàn giả tạo [13:39](http://www.youtube.com/watch?v=gLHqVR6VDUg&t=819). Nghiên cứu cho thấy ghi chép càng dài dòng thì kết quả học tập càng có xu hướng giảm, vì điều đó đồng nghĩa với việc bạn ít suy nghĩ hơn mà chỉ sao chép thụ động [13:46](http://www.youtube.com/watch?v=gLHqVR6VDUg&t=826)."},
+		{"id":"8e15ad190a2564f3","x":230,"y":-130,"width":320,"height":240,"type":"text","text":"## Chiến lược 1: Ghi chép trì hoãn (Delayed Note Taking)\nChiến lược này nhằm mục đích tăng khoảng trống giữa việc tiếp nhận thông tin và việc ghi chép, cho não thời gian để xử lý [05:46](http://www.youtube.com/watch?v=gLHqVR6VDUg&t=346)."}
+	],
+	"edges":[
+		{"id":"5da9487558caadfc","fromNode":"76c97e3620df6b5d","fromSide":"right","toNode":"06847f98fafc31ed","toSide":"left"},
+		{"id":"c12343bda303cb86","fromNode":"76c97e3620df6b5d","fromSide":"right","toNode":"8e15ad190a2564f3","toSide":"left"},
+		{"id":"ec801eab916cf9fe","fromNode":"76c97e3620df6b5d","fromSide":"right","toNode":"8cd8107f4bfd7c70","toSide":"left"}
+	]
+}
