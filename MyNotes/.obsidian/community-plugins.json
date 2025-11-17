@@ -1,4 +1,6 @@
 [
   "dataview",
-  "obsidian-mind-map"
+  "canvas-mindmap",
+  "advanced-canvas",
+  "webpage-html-export"
 ]
