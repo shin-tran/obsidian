@@ -15,16 +15,34 @@
               "state": {
                 "file": "Mindmap - Stored Procedure.canvas",
                 "viewState": {
-                  "x": 251,
-                  "y": -21.5,
-                  "zoom": -2.039296251718775
+                  "x": 14.25162376281014,
+                  "y": 79.82527804273207,
+                  "zoom": -1.3273031606671977
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "Mindmap - Stored Procedure"
             }
+          },
+          {
+            "id": "10ac961764dbd66b",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "OOP.canvas",
+                "viewState": {
+                  "x": 245.0421596520103,
+                  "y": 135.0068419770126,
+                  "zoom": -1.3333333333333333
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "OOP"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -174,10 +192,11 @@
       "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "15218a48aea8d673",
+  "active": "10ac961764dbd66b",
   "lastOpenFiles": [
-    "How to Mindmap as a Beginner.canvas",
     "Mindmap - Stored Procedure.canvas",
+    "OOP.canvas",
+    "How to Mindmap as a Beginner.canvas",
     "Mindmap - Stored Procedure.md",
     "NVIM.md",
     "How to Mindmap as a Beginner.md",
