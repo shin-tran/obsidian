@@ -24,7 +24,7 @@
   },
   "layout": {
     "direction": "LR",
-    "autoLayout": true,
+    "autoLayout": false,
     "autoLayoutDirection": "LR",
     "autoHeight": true,
     "ignoreFilesRegex": ""

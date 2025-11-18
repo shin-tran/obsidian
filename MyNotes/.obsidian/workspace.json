@@ -11,10 +11,17 @@
             "id": "15218a48aea8d673",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "canvas",
+              "state": {
+                "file": "Mindmap - Stored Procedure.canvas",
+                "viewState": {
+                  "x": 251,
+                  "y": -21.5,
+                  "zoom": -2.039296251718775
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Mindmap - Stored Procedure"
             }
           }
         ]
@@ -74,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "86e2f1d78a2f6fb9",
@@ -168,9 +176,9 @@
   },
   "active": "15218a48aea8d673",
   "lastOpenFiles": [
+    "How to Mindmap as a Beginner.canvas",
     "Mindmap - Stored Procedure.canvas",
     "Mindmap - Stored Procedure.md",
-    "How to Mindmap as a Beginner.canvas",
     "NVIM.md",
     "How to Mindmap as a Beginner.md",
     "Công Nghệ Phần Mềm.md",

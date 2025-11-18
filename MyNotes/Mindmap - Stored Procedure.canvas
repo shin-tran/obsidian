@@ -1,77 +1,746 @@
 {
 	"nodes":[
-		{"id":"80e15700a5035c5c","type":"text","text":"# Stored Procedure (Thủ tục lưu trữ)","x":-160,"y":-20,"width":265,"height":73},
-		{"id":"638ca6884e4e50fd","type":"text","text":"## Định nghĩa (Là gì?)","x":305,"y":-2065,"width":200,"height":65},
-		{"id":"a9391555f7649730","type":"text","text":"## Lợi ích (Tại sao dùng?)","x":305,"y":-1146,"width":200,"height":65},
-		{"id":"c80a12dc7d5262e3","type":"text","text":"## Tham số (Parameters)","x":305,"y":-99,"width":178,"height":65},
-		{"id":"0c25d184dfd37dc2","type":"text","text":"## Cú pháp & Cách dùng","x":305,"y":802,"width":157,"height":65},
-		{"id":"767bdb14448bb0e8","type":"text","text":"Có thể nhận tham số (parameters) và thực thi logic phức tạp.","x":705,"y":-1997,"width":200,"height":85},
-		{"id":"14a055064d29a2be","type":"text","text":"Là một **kịch bản (script)** chứa một hoặc nhiều câu lệnh SQL.","x":705,"y":-2277,"width":200,"height":115},
-		{"id":"74ac8e259a10f2cf","type":"text","text":"Được **biên dịch sẵn** và **lưu trữ** (stored) ngay trong CSDL.","x":705,"y":-2122,"width":200,"height":85},
-		{"id":"f37066db544f137a","type":"text","text":"Phải được gọi một cách **tường minh** (khác với Trigger).","x":705,"y":-1872,"width":177,"height":85},
-		{"id":"c448a95727aa5b55","type":"text","text":"**Hiệu năng cao (Performance)**","x":705,"y":-1686,"width":200,"height":55},
-		{"id":"72c3e51e4cfb91d8","type":"text","text":"**Bảo mật (Security) (Rất quan trọng!)**","x":705,"y":-1365,"width":195,"height":55},
-		{"id":"05137cc5af5af057","type":"text","text":"**Tái sử dụng (Reusability)**","x":705,"y":-1053,"width":155,"height":55},
-		{"id":"56132676e4f07b60","type":"text","text":"**Giảm tải mạng (Reduced Network Traffic)**","x":705,"y":-862,"width":175,"height":85},
-		{"id":"52bdd7998718169b","type":"text","text":"**Dễ bảo trì (Maintainability)**","x":705,"y":-614,"width":175,"height":55},
-		{"id":"d97fe4f47757522a","type":"text","text":"Chỉ biên dịch 1 lần, các lần gọi sau sẽ dùng lại \"kế hoạch thực thi\" (Execution Plan) đã được lưu (cached).","x":1105,"y":-1747,"width":200,"height":177},
-		{"id":"5a6ba227b579fdf7","type":"text","text":"Thay vì gửi 100 dòng lệnh SQL từ ứng dụng (PHP, Java...), bạn chỉ cần gửi 1 lệnh `CALL` hoặc `EXEC`.","x":1080,"y":-906,"width":200,"height":174},
-		{"id":"587465304e8f3309","type":"text","text":"Khi logic nghiệp vụ thay đổi (ví dụ: thêm bước kiểm tra kho), bạn chỉ cần sửa 1 Stored Procedure thay vì sửa code ở 10 nơi trong ứng dụng.","x":1080,"y":-692,"width":200,"height":212},
-		{"id":"9f433fa96dd245c4","type":"text","text":"**Chống SQL Injection:** Logic được viết sẵn, tham số được truyền vào an toàn.","x":1100,"y":-1530,"width":200,"height":130},
-		{"id":"1de71126339d81f9","type":"text","text":"**Phân quyền chi tiết:** Bạn có thể cấp quyền `EXECUTE` (thực thi) Store cho user, mà _không cần_ cấp quyền `SELECT`, `UPDATE`... trực tiếp trên bảng.","x":1100,"y":-1360,"width":200,"height":216},
-		{"id":"b2bc97a1294941e0","type":"text","text":"Đóng gói logic nghiệp vụ phức tạp vào một nơi (ví dụ: quy trình tạo đơn hàng, đăng ký user).","x":1060,"y":-1104,"width":200,"height":158},
-		{"id":"f165765eb367e91e","type":"text","text":"**Từ khóa**","x":705,"y":-345,"width":115,"height":27},
-		{"id":"bb4edf2c1cfc7147","type":"text","text":"**SQL Server:** `OUTPUT` (hoặc `OUT`).","x":1020,"y":-440,"width":160,"height":96},
-		{"id":"29ae2f4f65e29b9b","type":"text","text":"**MySQL:** `OUT` hoặc `INOUT`.","x":1020,"y":-304,"width":160,"height":81},
-		{"id":"739693c55446ad03","type":"text","text":"**Hoạt động:** Nhận một _tham chiếu_ đến biến bên ngoài.","x":705,"y":-183,"width":187,"height":85},
-		{"id":"747e725c2eb03b83","type":"text","text":"**Mục đích:** Dùng để \"trả\" giá trị _đi ra_ cho người gọi.","x":705,"y":-58,"width":167,"height":85},
-		{"id":"9c52779e7ae73eba","type":"text","text":"**Lưu ý:** Thay đổi giá trị này bên trong Store sẽ **THAY ĐỔI** biến gốc bên ngoài.","x":705,"y":67,"width":187,"height":115},
-		{"id":"0c7e3c3d93fcfbfb","type":"text","text":"**Ví dụ:** Lấy `ID` vừa tạo (`SCOPE_IDENTITY()` / `LAST_INSERT_ID()`).","x":705,"y":222,"width":202,"height":85},
-		{"id":"d23089bec7c5ebd8","type":"text","text":"## So sánh với các đối tượng khác","x":305,"y":1800,"width":165,"height":100},
-		{"id":"83a3a921e1255060","type":"text","text":"### Tạo / Sửa / Xóa","x":705,"y":440,"width":192,"height":31},
-		{"id":"d13ac4ef2a61efcd","type":"text","text":"### Cấu trúc bên trong","x":705,"y":1071,"width":140,"height":64},
-		{"id":"bc24271e0b49d9ac","type":"text","text":"### Cách gọi","x":705,"y":708,"width":128,"height":31},
-		{"id":"d5947dd833998937","type":"text","text":"**Tạo mới:** `CREATE PROCEDURE [Tên] ...`","x":1097,"y":347,"width":211,"height":55},
-		{"id":"9c6c9ca6755af149","type":"text","text":"**Xóa:** `DROP PROCEDURE [Tên]`","x":1097,"y":537,"width":255,"height":27},
-		{"id":"0fe511d71644f171","type":"text","text":"**Sửa đổi:** `ALTER PROCEDURE [Tên] ...`","x":1097,"y":442,"width":211,"height":55},
-		{"id":"5a3e5c89f5c63a0f","type":"text","text":"**SQL Server:** `EXEC sp_TenProcedure @param1 = 'GiaTri'`","x":1033,"y":604,"width":172,"height":115},
-		{"id":"3f63f58564d4adc1","type":"text","text":"**MySQL:** `CALL sp_TenProcedure('GiaTri')`","x":1033,"y":759,"width":157,"height":85},
-		{"id":"7c8da3ef78543a1f","type":"text","text":"`BEGIN ... END`","x":1045,"y":884,"width":161,"height":27},
-		{"id":"e446b375e7f3ea50","type":"text","text":"Xử lý lỗi: `TRY...CATCH` (T-SQL), `DECLARE HANDLER` (MySQL)","x":1045,"y":1238,"width":209,"height":85},
-		{"id":"52284541d5f01cd5","type":"text","text":"Khai báo biến: `DECLARE`","x":1045,"y":951,"width":217,"height":27},
-		{"id":"cf1c2ab3f9454476","type":"text","text":"Logic điều khiển: `IF...ELSE`, `CASE`, `WHILE`","x":1045,"y":1113,"width":165,"height":85},
-		{"id":"d8289185920a146e","type":"text","text":"Gán giá trị: `SET` (T-SQL) hoặc `SET` (MySQL)","x":1045,"y":1018,"width":217,"height":55},
-		{"id":"a1959c35aa231d02","type":"text","text":"### vs. Hàm (Function)","x":670,"y":1678,"width":142,"height":64},
-		{"id":"ac442345482f2615","type":"text","text":"### vs. Trigger (Trình kích hoạt)","x":670,"y":2186,"width":199,"height":64},
-		{"id":"869f362e06888b3c","type":"text","text":"**Function:** **PHẢI** trả về 1 giá trị duy nhất (scalar).","x":1012,"y":1363,"width":211,"height":55},
-		{"id":"d682f44b60b9ec8c","type":"text","text":"**Procedure:** Có thể làm mọi thứ (`INSERT`, `UPDATE`, `DELETE`).","x":1012,"y":1973,"width":202,"height":85},
-		{"id":"c0883d5cd301026e","type":"text","text":"**Procedure:** **CÓ THỂ** trả về: 0, 1 hoặc nhiều bộ kết quả (nhiều `SELECT`), hoặc trả về qua tham số `OUTPUT`.","x":1012,"y":1458,"width":234,"height":115},
-		{"id":"4d0a8fab37bdf974","type":"text","text":"**Function:** Thường không được phép thay đổi dữ liệu (chỉ `SELECT`).","x":1012,"y":1848,"width":222,"height":85},
-		{"id":"8b0f92e163ac7122","type":"text","text":"**Function:** Có thể gọi _trong_ câu lệnh `SELECT` (`SELECT dbo.fn_...`).","x":1012,"y":1613,"width":209,"height":100},
-		{"id":"5a01d259e02caad7","type":"text","text":"**Procedure:** Phải gọi bằng `CALL` / `EXEC`.","x":1012,"y":1753,"width":188,"height":55},
-		{"id":"b9e898ab0e9c9c7c","type":"text","text":"**Trigger:** Chạy **TỰ ĐỘNG** (Implicit) khi có sự kiện (`INSERT`, `UPDATE`, `DELETE`) trên 1 bảng.","x":1069,"y":2098,"width":218,"height":115},
-		{"id":"3fd0ce0c511b76d9","type":"text","text":"**Procedure:** Phải được **GỌI TƯỜNG MINH** (Explicit).","x":1069,"y":2253,"width":200,"height":85}
+		{
+			"id":"80e15700a5035c5c",
+			"type":"text",
+			"text":"# Stored Procedure (Thủ tục lưu trữ)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-160,
+			"y":-20,
+			"width":265,
+			"height":73
+		},
+		{
+			"id":"cd58bfae8e0eea2a",
+			"type":"text",
+			"text":"## Phân loại (Theo SQL Server)",
+			"styleAttributes":{
+				"textAlign":"center",
+				"shape":null,
+				"border":null
+			},
+			"x":-640,
+			"y":-33,
+			"width":200,
+			"height":100
+		},
+		{
+			"id":"322ff8a5c342c106",
+			"type":"text",
+			"text":"### Thủ tục Hệ thống (System SP)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1120,
+			"y":-803,
+			"width":200,
+			"height":100
+		},
+		{
+			"id":"479be8bb98985745",
+			"type":"text",
+			"text":"### Thủ tục Cục bộ (Local SP)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1116,
+			"y":-456,
+			"width":200,
+			"height":100
+		},
+		{
+			"id":"5c109e45b84388db",
+			"type":"text",
+			"text":"**Lưu trữ:** Trong CSDL `master`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1553,
+			"y":-783,
+			"width":255,
+			"height":60
+		},
+		{
+			"id":"4a855a3653086547",
+			"type":"text",
+			"text":"**Mục đích:** Thực hiện các tác vụ quản trị hệ thống (ví dụ: `sp_help`, `sp_who`).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1531,
+			"y":-703,
+			"width":233,
+			"height":85
+		},
+		{
+			"id":"70cfe7cea677dedc",
+			"type":"text",
+			"text":"**Tiền tố:** `sp_`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1440,
+			"y":-863,
+			"width":142,
+			"height":60
+		},
+		{
+			"id":"445c21960bdf431c",
+			"type":"text",
+			"text":"**Lưu trữ:** Trong CSDL của người dùng (user database).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":-436,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"bc70901024ab3070",
+			"type":"text",
+			"text":"**Mục đích:** Thực thi logic nghiệp vụ của ứng dụng (ví dụ: `sp_GetUsers`).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":-356,
+			"width":260,
+			"height":85
+		},
+		{
+			"id":"3fb14e7a4cd8d522",
+			"type":"text",
+			"text":"**(Loại phổ biến nhất)**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1500,
+			"y":-516,
+			"width":202,
+			"height":60
+		},
+		{
+			"id":"98481376d8e741ad",
+			"type":"text",
+			"text":"### Thủ tục Mở rộng (Extended SP)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1116,
+			"y":390,
+			"width":200,
+			"height":100
+		},
+		{
+			"id":"38672d6fb181c51c",
+			"type":"text",
+			"text":"**Tiền tố:** `xp_`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1428,
+			"y":320,
+			"width":130,
+			"height":60
+		},
+		{
+			"id":"513aa33dee7def4f",
+			"type":"text",
+			"text":"**Mục đích:** Tương tác với hệ điều hành (ví dụ: `xp_cmdshell` để chạy lệnh CMD).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":400,
+			"width":260,
+			"height":80
+		},
+		{
+			"id":"1d86fc7b5b3d5fc6",
+			"type":"text",
+			"text":"**Lưu trữ:** Là các file DLL bên ngoài (viết bằng C++, C#).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":500,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"60b52a314c6ec3e9",
+			"type":"text",
+			"text":"**Mục đích:** Được thiết kế để gọi và thực thi trên một server khác (Linked Server).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":640,
+			"width":260,
+			"height":100
+		},
+		{
+			"id":"23e42ff4a8c40d70",
+			"type":"text",
+			"text":"### Thủ tục Từ xa (Remote SP)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1116,
+			"y":640,
+			"width":200,
+			"height":100
+		},
+		{
+			"id":"98fd5a59bfa0a66e",
+			"type":"text",
+			"text":"**Lưu trữ:** Trong CSDL `TempDB`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":-155,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"6095c5b594d3e9d5",
+			"type":"text",
+			"text":"**Mục đích:** Chỉ tồn tại trong phiên (session) kết nối tạo ra nó.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":-75,
+			"width":260,
+			"height":83
+		},
+		{
+			"id":"8722054fb9ba065e",
+			"type":"text",
+			"text":"**Local Temp:** Tiền tố `#` (ví dụ: `#myTempSP`). Chỉ thấy bởi phiên tạo ra nó.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":28,
+			"width":260,
+			"height":77
+		},
+		{
+			"id":"ef2e823b65aaf711",
+			"type":"text",
+			"text":"**Global Temp:** Tiền tố `##` (ví dụ: `##myGlobalSP`). Thấy bởi mọi phiên.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1558,
+			"y":125,
+			"width":260,
+			"height":88
+		},
+		{
+			"id":"04a6141e9e654996",
+			"type":"text",
+			"text":"### Thủ tục Tạm (Temporary SP)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1120,
+			"y":-33,
+			"width":200,
+			"height":100
+		},
+		{
+			"id":"d23089bec7c5ebd8",
+			"type":"text",
+			"text":"## So sánh với các đối tượng khác",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-110,
+			"y":400,
+			"width":165,
+			"height":100
+		},
+		{
+			"id":"a1959c35aa231d02",
+			"type":"text",
+			"text":"### vs. Hàm (Function)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":255,
+			"y":720,
+			"width":142,
+			"height":64
+		},
+		{
+			"id":"c80a12dc7d5262e3",
+			"type":"text",
+			"text":"## Tham số (Parameters)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":720,
+			"y":-20,
+			"width":178,
+			"height":65
+		},
+		{
+			"id":"72c3e51e4cfb91d8",
+			"type":"text",
+			"text":"**Bảo mật (Security) (Rất quan trọng!)**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1177,
+			"y":-1099,
+			"width":195,
+			"height":55
+		},
+		{
+			"id":"a9391555f7649730",
+			"type":"text",
+			"text":"## Lợi ích (Tại sao dùng?)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":812,
+			"y":-940,
+			"width":200,
+			"height":65
+		},
+		{
+			"id":"14a055064d29a2be",
+			"type":"text",
+			"text":"Là một **kịch bản (script)** chứa một hoặc nhiều câu lệnh SQL.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-487,
+			"y":-717,
+			"width":200,
+			"height":115
+		},
+		{
+			"id":"767bdb14448bb0e8",
+			"type":"text",
+			"text":"Có thể nhận tham số (parameters) và thực thi logic phức tạp.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-7,
+			"y":-702,
+			"width":200,
+			"height":85
+		},
+		{
+			"id":"74ac8e259a10f2cf",
+			"type":"text",
+			"text":"Được **biên dịch sẵn** và **lưu trữ** (stored) ngay trong CSDL.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-247,
+			"y":-702,
+			"width":200,
+			"height":85
+		},
+		{
+			"id":"f37066db544f137a",
+			"type":"text",
+			"text":"Phải được gọi một cách **tường minh** (khác với Trigger).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":233,
+			"y":-702,
+			"width":200,
+			"height":85
+		},
+		{
+			"id":"638ca6884e4e50fd",
+			"type":"text",
+			"text":"## Định nghĩa (Là gì?)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-127,
+			"y":-395,
+			"width":200,
+			"height":65
+		},
+		{
+			"id":"52bdd7998718169b",
+			"type":"text",
+			"text":"**Dễ bảo trì (Maintainability)**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":825,
+			"y":-771,
+			"width":175,
+			"height":55
+		},
+		{
+			"id":"587465304e8f3309",
+			"type":"text",
+			"text":"Khi logic nghiệp vụ thay đổi (ví dụ: thêm bước kiểm tra kho), bạn chỉ cần sửa 1 Stored Procedure thay vì sửa code ở 10 nơi trong ứng dụng.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":812,
+			"y":-632,
+			"width":200,
+			"height":212
+		},
+		{
+			"id":"c448a95727aa5b55",
+			"type":"text",
+			"text":"**Hiệu năng cao (Performance)**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":700,
+			"y":-1114,
+			"width":200,
+			"height":55
+		},
+		{
+			"id":"d97fe4f47757522a",
+			"type":"text",
+			"text":"Chỉ biên dịch 1 lần, các lần gọi sau sẽ dùng lại \"kế hoạch thực thi\" (Execution Plan) đã được lưu (cached).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":700,
+			"y":-1380,
+			"width":200,
+			"height":177
+		},
+		{
+			"id":"9f433fa96dd245c4",
+			"type":"text",
+			"text":"**Chống SQL Injection:** Logic được viết sẵn, tham số được truyền vào an toàn.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1000,
+			"y":-1348,
+			"width":200,
+			"height":130
+		},
+		{
+			"id":"b2bc97a1294941e0",
+			"type":"text",
+			"text":"Đóng gói logic nghiệp vụ phức tạp vào một nơi (ví dụ: quy trình tạo đơn hàng, đăng ký user).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1460,
+			"y":-986,
+			"width":200,
+			"height":158
+		},
+		{
+			"id":"05137cc5af5af057",
+			"type":"text",
+			"text":"**Tái sử dụng (Reusability)**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1187,
+			"y":-935,
+			"width":155,
+			"height":55
+		},
+		{
+			"id":"5a6ba227b579fdf7",
+			"type":"text",
+			"text":"Thay vì gửi 100 dòng lệnh SQL từ ứng dụng (PHP, Java...), bạn chỉ cần gửi 1 lệnh `CALL` hoặc `EXEC`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1460,
+			"y":-788,
+			"width":200,
+			"height":174
+		},
+		{
+			"id":"56132676e4f07b60",
+			"type":"text",
+			"text":"**Giảm tải mạng (Reduced Network Traffic)**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1187,
+			"y":-744,
+			"width":175,
+			"height":85
+		},
+		{
+			"id":"1de71126339d81f9",
+			"type":"text",
+			"text":"**Phân quyền chi tiết:** Bạn có thể cấp quyền `EXECUTE` (thực thi) Store cho user, mà _không cần_ cấp quyền `SELECT`, `UPDATE`... trực tiếp trên bảng.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1372,
+			"y":-1434,
+			"width":200,
+			"height":216
+		},
+		{
+			"id":"bb4edf2c1cfc7147",
+			"type":"text",
+			"text":"**SQL Server:** `OUTPUT` (hoặc `OUT`).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1320,
+			"y":-402,
+			"width":160,
+			"height":96
+		},
+		{
+			"id":"29ae2f4f65e29b9b",
+			"type":"text",
+			"text":"**MySQL:** `OUT` hoặc `INOUT`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1320,
+			"y":-266,
+			"width":160,
+			"height":81
+		},
+		{
+			"id":"0fe511d71644f171",
+			"type":"text",
+			"text":"#### Sửa đổi\n**SQL Server**\n```sql\nALTER PROCEDURE [Tên]\n    -- Mặc định là IN\n    @param1 type,\n    @param2 type OUT,\n    ...\nAS\nBEGIN\n    [Truy vấn]\nEND;\n```\n**MySQL**\n```sql\n-- Thay thế ; bằng // tránh lỗi trong MySQL\nDELIMITER //\nDROP PROCEDURE IF EXISTS [Tên] //\n\nCREATE PROCEDURE [Tên](\n    IN @param1 type,\n    OUT @param2 type,\n    ...\n)\nBEGIN\n    [Truy vấn]//\nEND;\nDELIMITER ;\n```",
+			"styleAttributes":{
+				"textAlign":null
+			},
+			"x":1780,
+			"y":326,
+			"width":280,
+			"height":231
+		},
+		{
+			"id":"83a3a921e1255060",
+			"type":"text",
+			"text":"### Tạo / Sửa / Xóa",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1480,
+			"y":412,
+			"width":192,
+			"height":60
+		},
+		{
+			"id":"f165765eb367e91e",
+			"type":"text",
+			"text":"**Từ khóa**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1085,
+			"y":-317,
+			"width":94,
+			"height":60
+		},
+		{
+			"id":"739693c55446ad03",
+			"type":"text",
+			"text":"**Hoạt động:** Nhận một _tham chiếu_ đến biến bên ngoài.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1085,
+			"y":-177,
+			"width":187,
+			"height":85
+		},
+		{
+			"id":"747e725c2eb03b83",
+			"type":"text",
+			"text":"**Mục đích:** Dùng để \"trả\" giá trị _đi ra_ cho người gọi.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1085,
+			"y":-72,
+			"width":167,
+			"height":85
+		},
+		{
+			"id":"9c52779e7ae73eba",
+			"type":"text",
+			"text":"**Lưu ý:** Thay đổi giá trị này bên trong Store sẽ **THAY ĐỔI** biến gốc bên ngoài.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1085,
+			"y":32,
+			"width":187,
+			"height":115
+		},
+		{
+			"id":"0c7e3c3d93fcfbfb",
+			"type":"text",
+			"text":"**Ví dụ:** Lấy `ID` vừa tạo (`SCOPE_IDENTITY()` / `LAST_INSERT_ID()`).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1085,
+			"y":168,
+			"width":202,
+			"height":85
+		},
+		{
+			"id":"869f362e06888b3c",
+			"type":"text",
+			"text":"**Function:** **PHẢI** trả về 1 giá trị duy nhất (scalar).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-57,
+			"y":660,
+			"width":211,
+			"height":60
+		},
+		{
+			"id":"c0883d5cd301026e",
+			"type":"text",
+			"text":"**Procedure:** **CÓ THỂ** trả về: 0, 1 hoặc nhiều bộ kết quả (nhiều `SELECT`), hoặc trả về qua tham số `OUTPUT`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-80,
+			"y":740,
+			"width":234,
+			"height":115
+		},
+		{
+			"id":"4d0a8fab37bdf974",
+			"type":"text",
+			"text":"**Function:** Thường không được phép thay đổi dữ liệu (chỉ `SELECT`).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":500,
+			"y":667,
+			"width":222,
+			"height":85
+		},
+		{
+			"id":"d682f44b60b9ec8c",
+			"type":"text",
+			"text":"**Procedure:** Có thể làm mọi thứ (`INSERT`, `UPDATE`, `DELETE`).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":500,
+			"y":772,
+			"width":202,
+			"height":85
+		},
+		{
+			"id":"5a01d259e02caad7",
+			"type":"text",
+			"text":"**Procedure:** Phải gọi bằng `CALL` / `EXEC`.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":349,
+			"y":880,
+			"width":188,
+			"height":55
+		},
+		{
+			"id":"8b0f92e163ac7122",
+			"type":"text",
+			"text":"**Function:** Có thể gọi _trong_ câu lệnh `SELECT` (`SELECT dbo.fn_...`).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":100,
+			"y":880,
+			"width":209,
+			"height":100
+		},
+		{
+			"id":"ac442345482f2615",
+			"type":"text",
+			"text":"### vs. Trigger (Trình kích hoạt)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-460,
+			"y":712,
+			"width":199,
+			"height":64
+		},
+		{
+			"id":"b9e898ab0e9c9c7c",
+			"type":"text",
+			"text":"**Trigger:** Chạy **TỰ ĐỘNG** (Implicit) khi có sự kiện (`INSERT`, `UPDATE`, `DELETE`) trên 1 bảng.",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-598,
+			"y":880,
+			"width":218,
+			"height":115
+		},
+		{
+			"id":"3fd0ce0c511b76d9",
+			"type":"text",
+			"text":"**Procedure:** Phải được **GỌI TƯỜNG MINH** (Explicit).",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-360,
+			"y":880,
+			"width":200,
+			"height":85
+		},
+		{
+			"id":"0c25d184dfd37dc2",
+			"type":"text",
+			"text":"## Cú pháp & Cách dùng",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1160,
+			"y":835,
+			"width":157,
+			"height":65
+		},
+		{
+			"id":"d13ac4ef2a61efcd",
+			"type":"text",
+			"text":"### Cấu trúc bên trong",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1177,
+			"y":1115,
+			"width":140,
+			"height":64
+		},
+		{
+			"id":"cf1c2ab3f9454476",
+			"type":"text",
+			"text":"Logic điều khiển: `IF...ELSE`, `CASE`, `WHILE`",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1271,
+			"y":1300,
+			"width":209,
+			"height":91
+		},
+		{
+			"id":"d8289185920a146e",
+			"type":"text",
+			"text":"Gán giá trị: `SET` (T-SQL) hoặc `SET` (MySQL)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1022,
+			"y":1300,
+			"width":217,
+			"height":60
+		},
+		{
+			"id":"e446b375e7f3ea50",
+			"type":"text",
+			"text":"Xử lý lỗi: `TRY...CATCH` (T-SQL), `DECLARE HANDLER` (MySQL)",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1399,
+			"y":1098,
+			"width":209,
+			"height":99
+		},
+		{
+			"id":"7c8da3ef78543a1f",
+			"type":"text",
+			"text":"`BEGIN ... END`",
+			"styleAttributes":{"textAlign":"center"},
+			"x":940,
+			"y":1055,
+			"width":157,
+			"height":60
+		},
+		{
+			"id":"52284541d5f01cd5",
+			"type":"text",
+			"text":"Khai báo biến: `DECLARE`",
+			"styleAttributes":{"textAlign":"center"},
+			"x":880,
+			"y":1167,
+			"width":217,
+			"height":60
+		},
+		{
+			"id":"bc24271e0b49d9ac",
+			"type":"text",
+			"text":"### Cách gọi",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1440,
+			"y":837,
+			"width":128,
+			"height":60
+		},
+		{
+			"id":"5a3e5c89f5c63a0f",
+			"type":"text",
+			"text":"**SQL Server:** `EXEC sp_TenProcedure @param1 = 'GiaTri'`",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1682,
+			"y":752,
+			"width":172,
+			"height":115
+		},
+		{
+			"id":"3f63f58564d4adc1",
+			"type":"text",
+			"text":"**MySQL:** `CALL sp_TenProcedure('GiaTri')`",
+			"styleAttributes":{"textAlign":"center"},
+			"x":1682,
+			"y":887,
+			"width":157,
+			"height":85
+		},
+		{
+			"id":"9c6c9ca6755af149",
+			"type":"text",
+			"text":"#### Xoá\n```sql\nDROP PROCEDURE [Tên]\n```\n",
+			"styleAttributes":{
+				"textAlign":null
+			},
+			"x":1436,
+			"y":557,
+			"width":280,
+			"height":120
+		},
+		{
+			"id":"d5947dd833998937",
+			"type":"text",
+			"text":"#### Tạo mới\n**SQL Server**\n```sql\nCREATE PROCEDURE [Tên]\n    -- Mặc định là IN\n    @param1 type,\n    @param2 type OUT,\n    ...\nAS\nBEGIN\n    [Truy vấn]\nEND;\n```\n**MySQL**\n```sql\n-- Thay thế ; bằng // tránh lỗi trong MySQL\nDELIMITER //\nCREATE PROCEDURE [Tên](\n    IN @param1 type,\n    OUT @param2 type,\n    ...\n)\nBEGIN\n    [Truy vấn]//\nEND;\nDELIMITER ;\n```",
+			"styleAttributes":{
+				"textAlign":null
+			},
+			"x":1436,
+			"y":66,
+			"width":280,
+			"height":260
+		}
 	],
 	"edges":[
-		{"id":"99db11fa6741e432","fromNode":"80e15700a5035c5c","fromSide":"right","toNode":"638ca6884e4e50fd","toSide":"left"},
 		{"id":"9e6538a4dbeb203a","fromNode":"80e15700a5035c5c","fromSide":"right","toNode":"a9391555f7649730","toSide":"left"},
 		{"id":"e59a8460af3623ae","fromNode":"80e15700a5035c5c","fromSide":"right","toNode":"c80a12dc7d5262e3","toSide":"left"},
-		{"id":"0eeae4918aa32710","fromNode":"80e15700a5035c5c","fromSide":"right","toNode":"0c25d184dfd37dc2","toSide":"left"},
-		{"id":"390e900c578e329b","fromNode":"638ca6884e4e50fd","fromSide":"right","toNode":"14a055064d29a2be","toSide":"left"},
-		{"id":"ac8a2831cd9e56c5","fromNode":"638ca6884e4e50fd","fromSide":"right","toNode":"74ac8e259a10f2cf","toSide":"left"},
-		{"id":"d9d6a387bc352256","fromNode":"638ca6884e4e50fd","fromSide":"right","toNode":"767bdb14448bb0e8","toSide":"left"},
-		{"id":"99d587bbb37ec4c8","fromNode":"638ca6884e4e50fd","fromSide":"right","toNode":"f37066db544f137a","toSide":"left"},
-		{"id":"4e5d4c02f497bd98","fromNode":"a9391555f7649730","fromSide":"right","toNode":"c448a95727aa5b55","toSide":"left"},
+		{
+			"id":"0eeae4918aa32710",
+			"toFloating":false,
+			"styleAttributes":{
+				"pathfindingMethod":null,
+				"path":null
+			},
+			"fromNode":"80e15700a5035c5c",
+			"fromSide":"right",
+			"toNode":"0c25d184dfd37dc2",
+			"toSide":"left"
+		},
 		{"id":"d9fc68698eb71bf3","fromNode":"a9391555f7649730","fromSide":"right","toNode":"56132676e4f07b60","toSide":"left"},
 		{"id":"1661a607d2667541","fromNode":"a9391555f7649730","fromSide":"right","toNode":"72c3e51e4cfb91d8","toSide":"left"},
 		{"id":"df22f9ecd154ea03","fromNode":"a9391555f7649730","fromSide":"right","toNode":"05137cc5af5af057","toSide":"left"},
-		{"id":"6225ebae54a1a857","fromNode":"a9391555f7649730","fromSide":"right","toNode":"52bdd7998718169b","toSide":"left"},
-		{"id":"c34e019f4fc13002","fromNode":"c448a95727aa5b55","fromSide":"right","toNode":"d97fe4f47757522a","toSide":"left"},
-		{"id":"2ae8b7080dcace24","fromNode":"72c3e51e4cfb91d8","fromSide":"right","toNode":"9f433fa96dd245c4","toSide":"left"},
-		{"id":"e43f4c5e6325d83d","fromNode":"72c3e51e4cfb91d8","fromSide":"right","toNode":"1de71126339d81f9","toSide":"left"},
 		{"id":"84fcaf8b99ae7547","fromNode":"05137cc5af5af057","fromSide":"right","toNode":"b2bc97a1294941e0","toSide":"left"},
 		{"id":"07cd80e80cd489d8","fromNode":"56132676e4f07b60","fromSide":"right","toNode":"5a6ba227b579fdf7","toSide":"left"},
-		{"id":"96874b52abfd07bd","fromNode":"52bdd7998718169b","fromSide":"right","toNode":"587465304e8f3309","toSide":"left"},
 		{"id":"251f6e12244b9b24","fromNode":"c80a12dc7d5262e3","fromSide":"right","toNode":"f165765eb367e91e","toSide":"left"},
 		{"id":"2758fc85a0c47ace","fromNode":"f165765eb367e91e","fromSide":"right","toNode":"bb4edf2c1cfc7147","toSide":"left"},
 		{"id":"405d41c2511c2a4c","fromNode":"f165765eb367e91e","fromSide":"right","toNode":"29ae2f4f65e29b9b","toSide":"left"},
@@ -79,30 +748,465 @@
 		{"id":"8cef187185f4024a","fromNode":"c80a12dc7d5262e3","fromSide":"right","toNode":"747e725c2eb03b83","toSide":"left"},
 		{"id":"6f266fb3c6f6c0fc","fromNode":"c80a12dc7d5262e3","fromSide":"right","toNode":"0c7e3c3d93fcfbfb","toSide":"left"},
 		{"id":"faf0371da58716c4","fromNode":"c80a12dc7d5262e3","fromSide":"right","toNode":"9c52779e7ae73eba","toSide":"left"},
-		{"id":"14da7bf954618b09","fromNode":"80e15700a5035c5c","fromSide":"right","toNode":"d23089bec7c5ebd8","toSide":"left"},
-		{"id":"f70f5564855e7b51","fromNode":"0c25d184dfd37dc2","fromSide":"right","toNode":"d13ac4ef2a61efcd","toSide":"left"},
 		{"id":"a8771fcf447e0fc7","fromNode":"0c25d184dfd37dc2","fromSide":"right","toNode":"83a3a921e1255060","toSide":"left"},
 		{"id":"363a295ff7479234","fromNode":"0c25d184dfd37dc2","fromSide":"right","toNode":"bc24271e0b49d9ac","toSide":"left"},
-		{"id":"dfb0e3a7fefdbf55","fromNode":"83a3a921e1255060","fromSide":"right","toNode":"d5947dd833998937","toSide":"left"},
-		{"id":"553a103ad293dd0a","fromNode":"83a3a921e1255060","fromSide":"right","toNode":"9c6c9ca6755af149","toSide":"left"},
 		{"id":"070543bb925ee594","fromNode":"83a3a921e1255060","fromSide":"right","toNode":"0fe511d71644f171","toSide":"left"},
 		{"id":"f905653c11570462","fromNode":"bc24271e0b49d9ac","fromSide":"right","toNode":"5a3e5c89f5c63a0f","toSide":"left"},
 		{"id":"ab9467870ea449c2","fromNode":"bc24271e0b49d9ac","fromSide":"right","toNode":"3f63f58564d4adc1","toSide":"left"},
-		{"id":"155caf36edb9cc30","fromNode":"d13ac4ef2a61efcd","fromSide":"right","toNode":"7c8da3ef78543a1f","toSide":"left"},
-		{"id":"d59060a8bb8d825b","fromNode":"d13ac4ef2a61efcd","fromSide":"right","toNode":"e446b375e7f3ea50","toSide":"left"},
-		{"id":"b06f5fd930848698","fromNode":"d13ac4ef2a61efcd","fromSide":"right","toNode":"52284541d5f01cd5","toSide":"left"},
-		{"id":"16ffd98435580553","fromNode":"d13ac4ef2a61efcd","fromSide":"right","toNode":"cf1c2ab3f9454476","toSide":"left"},
-		{"id":"e40136f9f350eb70","fromNode":"d13ac4ef2a61efcd","fromSide":"right","toNode":"d8289185920a146e","toSide":"left"},
-		{"id":"040ffdc353cc80b1","fromNode":"d23089bec7c5ebd8","fromSide":"right","toNode":"a1959c35aa231d02","toSide":"left"},
-		{"id":"3c0735b09abed544","fromNode":"d23089bec7c5ebd8","fromSide":"right","toNode":"ac442345482f2615","toSide":"left"},
-		{"id":"e7bea43b0ab59791","fromNode":"a1959c35aa231d02","fromSide":"right","toNode":"869f362e06888b3c","toSide":"left"},
-		{"id":"c95e2b19480f3519","fromNode":"a1959c35aa231d02","fromSide":"right","toNode":"d682f44b60b9ec8c","toSide":"left"},
-		{"id":"d73325d3343101e8","fromNode":"a1959c35aa231d02","fromSide":"right","toNode":"c0883d5cd301026e","toSide":"left"},
-		{"id":"0014b44bfe7a50b9","fromNode":"a1959c35aa231d02","fromSide":"right","toNode":"4d0a8fab37bdf974","toSide":"left"},
-		{"id":"451b80bf3c4f5c26","fromNode":"a1959c35aa231d02","fromSide":"right","toNode":"8b0f92e163ac7122","toSide":"left"},
-		{"id":"c62b6b841e65fb8d","fromNode":"a1959c35aa231d02","fromSide":"right","toNode":"5a01d259e02caad7","toSide":"left"},
-		{"id":"3911baad1c0b8d39","fromNode":"ac442345482f2615","fromSide":"right","toNode":"b9e898ab0e9c9c7c","toSide":"left"},
-		{"id":"bb788bfd53fd18a0","fromNode":"ac442345482f2615","fromSide":"right","toNode":"3fd0ce0c511b76d9","toSide":"left"}
+		{
+			"id":"400c10473b8ff7ef",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"80e15700a5035c5c",
+			"fromSide":"left",
+			"toNode":"cd58bfae8e0eea2a",
+			"toSide":"right"
+		},
+		{
+			"id":"939c2f9d59441940",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"cd58bfae8e0eea2a",
+			"fromSide":"left",
+			"toNode":"322ff8a5c342c106",
+			"toSide":"right"
+		},
+		{
+			"id":"3dae2921e3c0e4dc",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"cd58bfae8e0eea2a",
+			"fromSide":"left",
+			"toNode":"479be8bb98985745",
+			"toSide":"right"
+		},
+		{
+			"id":"94bdf76a3d98a089",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"cd58bfae8e0eea2a",
+			"fromSide":"left",
+			"toNode":"04a6141e9e654996",
+			"toSide":"right"
+		},
+		{
+			"id":"da2bc0e111c8e34b",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"cd58bfae8e0eea2a",
+			"fromSide":"left",
+			"toNode":"98481376d8e741ad",
+			"toSide":"right"
+		},
+		{
+			"id":"a2832680e6b57a8f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"cd58bfae8e0eea2a",
+			"fromSide":"left",
+			"toNode":"23e42ff4a8c40d70",
+			"toSide":"right"
+		},
+		{
+			"id":"59776adf426d11fe",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"322ff8a5c342c106",
+			"fromSide":"left",
+			"toNode":"70cfe7cea677dedc",
+			"toSide":"right"
+		},
+		{
+			"id":"4d49d81daf40bfe9",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"322ff8a5c342c106",
+			"fromSide":"left",
+			"toNode":"5c109e45b84388db",
+			"toSide":"right"
+		},
+		{
+			"id":"6f69ff360eb922f3",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"322ff8a5c342c106",
+			"fromSide":"left",
+			"toNode":"4a855a3653086547",
+			"toSide":"right"
+		},
+		{
+			"id":"bcc41dfcf16ed115",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"479be8bb98985745",
+			"fromSide":"left",
+			"toNode":"3fb14e7a4cd8d522",
+			"toSide":"right"
+		},
+		{
+			"id":"612423329d5d4c20",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"479be8bb98985745",
+			"fromSide":"left",
+			"toNode":"445c21960bdf431c",
+			"toSide":"right"
+		},
+		{
+			"id":"24aca3070fb1fc08",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"479be8bb98985745",
+			"fromSide":"left",
+			"toNode":"bc70901024ab3070",
+			"toSide":"right"
+		},
+		{
+			"id":"67ad07ad7a5ef14b",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"80e15700a5035c5c",
+			"fromSide":"top",
+			"toNode":"638ca6884e4e50fd",
+			"toSide":"bottom"
+		},
+		{
+			"id":"e2c177bd0101f546",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"638ca6884e4e50fd",
+			"fromSide":"top",
+			"toNode":"14a055064d29a2be",
+			"toSide":"bottom"
+		},
+		{
+			"id":"2007d0a21ab27eff",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"638ca6884e4e50fd",
+			"fromSide":"top",
+			"toNode":"74ac8e259a10f2cf",
+			"toSide":"bottom"
+		},
+		{
+			"id":"e73c72f6ac4f29ae",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"638ca6884e4e50fd",
+			"fromSide":"top",
+			"toNode":"767bdb14448bb0e8",
+			"toSide":"bottom"
+		},
+		{
+			"id":"b770de24ee9adc1f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"638ca6884e4e50fd",
+			"fromSide":"top",
+			"toNode":"f37066db544f137a",
+			"toSide":"bottom"
+		},
+		{
+			"id":"c579a49c3b81d63f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"04a6141e9e654996",
+			"fromSide":"left",
+			"toNode":"98fd5a59bfa0a66e",
+			"toSide":"right"
+		},
+		{
+			"id":"0c3a041fa4516ac2",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"04a6141e9e654996",
+			"fromSide":"left",
+			"toNode":"6095c5b594d3e9d5",
+			"toSide":"right"
+		},
+		{
+			"id":"88259aba1c5e738c",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"04a6141e9e654996",
+			"fromSide":"left",
+			"toNode":"8722054fb9ba065e",
+			"toSide":"right"
+		},
+		{
+			"id":"34053f93372aeb8d",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"04a6141e9e654996",
+			"fromSide":"left",
+			"toNode":"ef2e823b65aaf711",
+			"toSide":"right"
+		},
+		{
+			"id":"a7e3f2e7c639e5bb",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"98481376d8e741ad",
+			"fromSide":"left",
+			"toNode":"38672d6fb181c51c",
+			"toSide":"right"
+		},
+		{
+			"id":"33dda347db06388f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"98481376d8e741ad",
+			"fromSide":"left",
+			"toNode":"513aa33dee7def4f",
+			"toSide":"right"
+		},
+		{
+			"id":"9594ef7f35bcf35b",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"98481376d8e741ad",
+			"fromSide":"left",
+			"toNode":"1d86fc7b5b3d5fc6",
+			"toSide":"right"
+		},
+		{
+			"id":"dfc405d85a628a23",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"23e42ff4a8c40d70",
+			"fromSide":"left",
+			"toNode":"60b52a314c6ec3e9",
+			"toSide":"right"
+		},
+		{
+			"id":"b3104694696b7629",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"ac442345482f2615",
+			"fromSide":"bottom",
+			"toNode":"b9e898ab0e9c9c7c",
+			"toSide":"top"
+		},
+		{
+			"id":"5a3cffbf8740f256",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d23089bec7c5ebd8",
+			"fromSide":"bottom",
+			"toNode":"ac442345482f2615",
+			"toSide":"top"
+		},
+		{
+			"id":"1a0fb358a14a0d50",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"a1959c35aa231d02",
+			"fromSide":"bottom",
+			"toNode":"8b0f92e163ac7122",
+			"toSide":"top"
+		},
+		{
+			"id":"050ac3ede389bbdc",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"a1959c35aa231d02",
+			"fromSide":"bottom",
+			"toNode":"5a01d259e02caad7",
+			"toSide":"top"
+		},
+		{
+			"id":"71ac60766606143a",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d23089bec7c5ebd8",
+			"fromSide":"bottom",
+			"toNode":"a1959c35aa231d02",
+			"toSide":"top"
+		},
+		{
+			"id":"e48abdb276e99a32",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"80e15700a5035c5c",
+			"fromSide":"bottom",
+			"toNode":"d23089bec7c5ebd8",
+			"toSide":"top"
+		},
+		{
+			"id":"21b26917c90ef3b0",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"a9391555f7649730",
+			"fromSide":"bottom",
+			"toNode":"52bdd7998718169b",
+			"toSide":"top"
+		},
+		{
+			"id":"eee7db773e310753",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"52bdd7998718169b",
+			"fromSide":"bottom",
+			"toNode":"587465304e8f3309",
+			"toSide":"top"
+		},
+		{
+			"id":"9ba9d7b5efd4945b",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"c448a95727aa5b55",
+			"fromSide":"top",
+			"toNode":"d97fe4f47757522a",
+			"toSide":"bottom"
+		},
+		{
+			"id":"519a58311f3bfa5c",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"a9391555f7649730",
+			"fromSide":"top",
+			"toNode":"c448a95727aa5b55",
+			"toSide":"bottom"
+		},
+		{
+			"id":"7021c90ac93ee3f0",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"72c3e51e4cfb91d8",
+			"fromSide":"top",
+			"toNode":"9f433fa96dd245c4",
+			"toSide":"bottom"
+		},
+		{
+			"id":"1909c64b7a445483",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"72c3e51e4cfb91d8",
+			"fromSide":"top",
+			"toNode":"1de71126339d81f9",
+			"toSide":"bottom"
+		},
+		{
+			"id":"ee06953cb800430c",
+			"styleAttributes":{
+				"arrow":null,
+				"pathfindingMethod":null
+			},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"a1959c35aa231d02",
+			"fromSide":"left",
+			"toNode":"869f362e06888b3c",
+			"toSide":"right"
+		},
+		{
+			"id":"f6e4f6ed06015796",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"a1959c35aa231d02",
+			"fromSide":"left",
+			"toNode":"c0883d5cd301026e",
+			"toSide":"right"
+		},
+		{
+			"id":"b6b67afe211b059f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"a1959c35aa231d02",
+			"fromSide":"right",
+			"toNode":"4d0a8fab37bdf974",
+			"toSide":"left"
+		},
+		{
+			"id":"4e1fe12b68ee8a76",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"a1959c35aa231d02",
+			"fromSide":"right",
+			"toNode":"d682f44b60b9ec8c",
+			"toSide":"left"
+		},
+		{
+			"id":"6a8f60b33544fbde",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"ac442345482f2615",
+			"fromSide":"bottom",
+			"toNode":"3fd0ce0c511b76d9",
+			"toSide":"top"
+		},
+		{
+			"id":"e661cdbfa0eddf76",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"0c25d184dfd37dc2",
+			"fromSide":"bottom",
+			"toNode":"d13ac4ef2a61efcd",
+			"toSide":"top"
+		},
+		{
+			"id":"5588255869512fe0",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d13ac4ef2a61efcd",
+			"fromSide":"left",
+			"toNode":"7c8da3ef78543a1f",
+			"toSide":"right"
+		},
+		{
+			"id":"ceeaecf2526c6453",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d13ac4ef2a61efcd",
+			"fromSide":"left",
+			"toNode":"52284541d5f01cd5",
+			"toSide":"right"
+		},
+		{
+			"id":"58c7e53491ee9fe8",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d13ac4ef2a61efcd",
+			"fromSide":"bottom",
+			"toNode":"d8289185920a146e",
+			"toSide":"top"
+		},
+		{
+			"id":"b921a1874ea7e34f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d13ac4ef2a61efcd",
+			"fromSide":"right",
+			"toNode":"e446b375e7f3ea50",
+			"toSide":"left"
+		},
+		{
+			"id":"000aa506564a3f47",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d13ac4ef2a61efcd",
+			"fromSide":"bottom",
+			"toNode":"cf1c2ab3f9454476",
+			"toSide":"top"
+		},
+		{
+			"id":"6dcabc015bf90627",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"83a3a921e1255060",
+			"fromSide":"bottom",
+			"toNode":"9c6c9ca6755af149",
+			"toSide":"top"
+		},
+		{
+			"id":"9a634e4dea0783bc",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d5947dd833998937",
+			"fromSide":"bottom",
+			"toNode":"83a3a921e1255060",
+			"toSide":"top"
+		}
 	],
 	"metadata":{
 		"version":"1.0-1.0",
