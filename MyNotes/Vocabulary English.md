@@ -1,0 +1,2 @@
+- Hope: hy vọng nói chung
+- Hopes(n): kỳ vọng của một ai đó
