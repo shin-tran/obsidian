@@ -8,6 +8,7 @@
 - chrome
 - powertoys
 - dbeaver
+- dotnet-9.0-desktopruntime
 `scoop`
 (Bucket: Main)
 - chezmoi
