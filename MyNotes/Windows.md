@@ -9,6 +9,9 @@
 - powertoys
 - dbeaver
 - dotnet-9.0-desktopruntime
+- cloudflared
+- nomachine
+- mongodb-compass
 `scoop`
 (Bucket: Main)
 - chezmoi
