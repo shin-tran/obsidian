@@ -3,15 +3,22 @@
 ### All my packages
 `choco`
 - googlechrome
-- autohotkey.install
+- autohotkey
 - zalopc
 - chrome
 - powertoys
 - dbeaver
-- dotnet-9.0-desktopruntime
 - cloudflared
 - nomachine
 - mongodb-compass
+- dotnet
+- dotnet-sdk
+- dotnet-8.0-sdk
+- vscode
+- notepadplusplus
+- obs-studio
+- obsidian
+- 
 `scoop`
 (Bucket: Main)
 - chezmoi

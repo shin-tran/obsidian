@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux.md",
+                "file": "CaoThang/C Sharp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux"
+              "title": "C Sharp"
             }
           }
         ]
@@ -171,28 +171,31 @@
   },
   "active": "0aa5b4d47fe97333",
   "lastOpenFiles": [
-    "Windows.md",
-    "Vocabulary English.md",
-    "Untitled.md",
+    "CaoThang/Python.md",
+    "CaoThang/C Sharp.md",
+    "CaoThang/C Sharp.md",
     "Todos.md",
+    "CaoThang",
+    "Untitled 1.md",
+    "Windows.md",
+    "Calis.md",
+    "Untitled.md",
     "Tip học tập.md",
+    "Linux.md",
+    "Đề Cương/HQTCSDL.md",
+    "Vocabulary English.md",
     "Tài liệu thập cẩm.md",
     "OOP_CheatSheet.md.md",
     "OOP.canvas",
     "NVIM.md",
     "Chuẩn Bị Thực Tập.canvas",
     "Mindmap - Stored Procedure.canvas",
-    "Linux.md",
     "How to Mindmap as a Beginner.canvas",
     "ExpressJS.md",
     "AllTrick.md",
-    "Calis.md",
     "A2 VSTEP.md",
-    "Untitled 1.md",
-    "Untitled",
     "Công Nghệ Phần Mềm.md",
     "PHP.md",
-    "Đề Cương/HQTCSDL.md",
     "Đề Cương/PHP.md",
     "Đề Cương",
     "Mindmap - Stored Procedure.md",
@@ -201,8 +204,6 @@
     "Untitled.base",
     "Ăn Vặt Shop.md",
     "Copywriting.md",
-    "Note.md",
-    "QuizApp.md",
     "Resources",
     "New folder",
     "CodeSnippets"
