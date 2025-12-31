@@ -1,3 +1,1 @@
-- [ ] Học C#
-- [ ] Viết một API ở dự án X Clone
-- [ ] Làm bài tập python
+- [ ] 
