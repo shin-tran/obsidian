@@ -36,6 +36,21 @@ dotnet sln add TenProject/TenProject.csproj
 dotnet sln remove TenProject/TenProject.csproj
 ```
 
+**Create a new winform app:**
+
+```bash
+dotnet new winforms -n GameCaro
+cd GameCaro
+# run to test
+dotnet run
+```
+
+**Install a package into project**:
+
+```bash
+dotnet add package FontAwesome.Sharp
+```
+
 **Thêm tham chiếu đến dự án Library:**
 
 ```bash
@@ -86,8 +101,6 @@ Dùng cho những thứ "lớn", mang tính chất toàn cục hoặc công khai
 - **Áp dụng cho:** Class, Property, Method (Hàm), Namespace.
 
 - **Ví dụ:** `Student`, `SayHello`, `FirstName`, `Program`.
-
-- **Trong code của bạn:** Chữ `Name` viết hoa chữ N là vì nó là **Property**.
 
 ### B. camelCase (viết thường chữ đầu, Viết Hoa Các Chữ Sau)
 

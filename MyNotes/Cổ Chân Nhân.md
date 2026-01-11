@@ -131,3 +131,120 @@ Phương Nguyên dừng ở bước 27 (Loại Bính). Đám đông thất vọn
 ## 20. Trái tim là nơi chứa đựng Hy vọng, nhưng Hành động mới biến nó thành hiện thực
 
 Nhân Tổ có Hy vọng nên Khốn Cảnh sợ. Nhưng để thoát hẳn, Nhân Tổ phải tiếp tục sống và đi tiếp. Phương Nguyên có Cổ Hy Vọng, nhưng hắn không ngồi đó cầu nguyện. Hắn dùng nó để **mở Không khiếu**. **Bài học:** Hy vọng chỉ là nhiên liệu. Hành động mới là động cơ. Đừng chỉ hy vọng ngày mai sẽ tốt hơn, hãy dùng niềm hy vọng đó để bắt tay vào làm việc ngay bây giờ.
+
+## 21. Sự độc lập về Cảm xúc (Emotional Independence)
+
+Phương Nguyên nói: _"Sự tuyệt diệu trong cuộc sống con người, quyết định ở quá trình truy đuổi ước mơ, không cần chạy theo thất vọng hay là yêu thích của người ngoài."_
+
+- **Bài học:** Đừng để hạnh phúc hay nỗi buồn của bạn phụ thuộc vào **phản ứng của người khác**.
+    
+- Khi bạn thành công, họ tung hô. Khi bạn thất bại, họ chà đạp. Nếu bạn sống vì lời khen của họ, bạn sẽ chết vì lời chê của họ. Hãy xây dựng một "Hệ quy chiếu nội tại" (Internal Locus of Control): Tôi làm vì tôi muốn, tôi vui vì tôi đạt được mục tiêu của tôi, mặc kệ các người nghĩ gì.
+
+## 22. Hiệu ứng hào quang và Sự lật mặt của đám đông
+
+Vừa phút trước Tộc trưởng còn chửi "anh em vô dụng", phút sau đã đỏ mắt tranh giành Phương Chính.
+
+- **Bài học:** Lòng người là thứ dễ thay đổi nhất, đặc biệt khi dính đến **Lợi ích**.
+    
+- Đừng tin vào lòng trung thành hay sự tôn trọng nếu bạn không có giá trị. Khi bạn có giá trị (như Phương Chính loại Giáp), kẻ thù cũng muốn làm bạn. Khi bạn mất giá trị (như Phương Nguyên loại Bính), người thân cũng coi như người dưng. Hiểu điều này để không bị sốc và không oán trách.
+
+## 23. Tâm thế trước Nghịch cảnh: "Cười nhạt"
+
+Phương Nguyên bị cả gia tộc cười nhạo, nhưng hắn lại mỉm cười bí hiểm.
+
+- **Bài học:** Khi cuộc đời tát bạn một cú đau điếng, phản ứng ngầu nhất không phải là khóc lóc hay giận dữ, mà là **mỉm cười và tiếp tục đi**.
+    
+- Nụ cười đó thể hiện sự kiểm soát. Nó nói rằng: _"Ta biết chuyện này sẽ xảy ra, và ta vẫn ổn."_ Nó khiến kẻ thù hoang mang và giữ cho tâm trí bạn sáng suốt.
+
+## 24. Tư chất không phải là tất cả (Talent is Overrated)
+
+Phương Chính có tư chất Giáp nhưng tâm lý yếu đuối (ngã xuống nước, hoảng loạn). Phương Nguyên tư chất Bính nhưng tâm lý vững vàng (kéo em lên, bình tĩnh).
+
+- **Bài học:** Trong đường dài, **Bản lĩnh (Grit)** sẽ đánh bại Tài năng thiên bẩm.
+    
+- Một người tài năng mà yếu đuối sẽ dễ bị gãy gập trước áp lực. Một người bình thường nhưng lì lợm và có trí tuệ sẽ đi xa hơn. Nếu bạn không thông minh nhất, hãy là người lì lợm nhất.
+
+## 25. Chiến thuật "Làm mờ sự hiện diện" (Strategic Invisibility)
+
+Khi bạn đang ấp ủ một kế hoạch lớn hoặc đang yếu thế, hãy để người khác nghĩ bạn vô hại hoặc thất bại.
+
+- **Bài học:** Đừng cố chứng minh mình giỏi khi chưa cần thiết. Hãy để đối thủ khinh thường bạn. Sự khinh thường của họ chính là sự an toàn của bạn. Khi họ lơ là, bạn có thể tự do hành động (như Phương Nguyên đi tìm kho báu).
+
+## 26. Cơ hội ẩn trong "Thông tin bất đối xứng" (Asymmetric Information)
+
+Phương Nguyên biết về Tửu Trùng, người khác thì không. Đó là lợi thế tuyệt đối.
+
+- **Bài học:** Trong kinh doanh và cuộc sống, lợi nhuận lớn nhất đến từ những thứ **người khác chưa biết**. Hãy luôn tìm kiếm những thông tin ngách, những xu hướng chưa bùng nổ. Đừng đi theo đám đông (như các bạn học đang ngồi nghe giảng), hãy đi tìm "kho báu" mà đám đông bỏ qua.
+
+## 27. Đừng tin vào "Sách giáo khoa" hay "Truyền thông" một cách mù quáng
+
+Gia lão dạy rằng tư chất Bính chỉ lên được Nhị chuyển. Lịch sử dạy rằng Hoa Tửu là kẻ xấu.
+
+- **Bài học:** Các quy tắc và định kiến xã hội thường được thiết lập để giữ ổn định trật tự (người yếu an phận, người mạnh cai trị). Nếu bạn muốn vượt qua giới hạn (như Phương Nguyên muốn vượt qua tư chất Bính), bạn phải **nghi ngờ mọi giáo điều**. Phải tìm con đường "tà đạo" (như di sản Hoa Tửu) mà hệ thống chính thống cấm đoán hoặc che giấu.
+
+## 28. Sự kiên trì trong sự "Vô vọng"
+
+Phương Nguyên đi tìm Tửu Trùng cả tuần không thấy, uống rượu say mèm, bị chửi bới, nhưng hắn vẫn làm.
+
+- **Bài học:** Khi bạn theo đuổi một mục tiêu mà không ai hiểu, bạn sẽ trông giống một kẻ điên hoặc kẻ thất bại. Hãy chấp nhận điều đó. Kết quả cuối cùng sẽ là câu trả lời. Sự kiên trì không phải là gồng mình lên, mà là âm thầm làm việc của mình mỗi ngày, bất chấp tiếng ồn xung quanh.
+
+## 29. Cạm bẫy của "Sự tự tin vay mượn" (Borrowed Confidence)
+
+Phương Chính tự tin vì được người khác khen.
+
+- **Bài học:** Sự tự tin xây trên lời khen của người khác giống như lâu đài cát. Sóng đánh là tan.
+    
+- Hãy cảnh giác khi bạn cảm thấy hưng phấn vì được tung hô. Đó là lúc bạn dễ bị tổn thương nhất. Sự tự tin thật sự phải đến từ năng lực giải quyết vấn đề của chính bạn, bất chấp người khác khen hay chê.
+
+## 30. Sự im lặng là tiếng gầm lớn nhất
+
+Phương Chính nói nhiều, ra vẻ dạy đời. Phương Nguyên im lặng, lướt qua.
+
+- **Bài học:** Khi đối mặt với kẻ đang cố thể hiện quyền lực hoặc khiêu khích bạn, đừng tranh cãi. Sự phớt lờ hoàn toàn sẽ khiến họ phát điên vì họ cảm thấy không được tôn trọng, không được công nhận. Im lặng và tập trung vào việc của mình là cách trả thù sang trọng nhất.
+
+## 31. Đầu tư mạo hiểm khi ở thế yếu
+
+Phương Nguyên dốc hết tiền mua rượu dù sắp đói.
+
+- **Bài học:** Khi bạn đang ở thế yếu (tư chất kém, ít tài nguyên), chơi theo luật an toàn sẽ khiến bạn thua từ từ. Chỉ có **chấp nhận rủi ro lớn** (High Risk, High Reward) mới có cơ hội lật ngược thế cờ.
+    
+- Nếu Phương Nguyên chỉ chăm chăm luyện Cổ Nguyệt Quang như bao người, hắn mãi mãi là loại Bính tầm thường. Hắn chọn đánh cược vào Tửu Trùng để tìm cơ hội đột phá.
+
+## 32. Hiểu rõ giá trị của đồng tiền (Nguyên thạch)
+
+Nguyên thạch là Tiền + Năng lượng.
+
+- **Bài học:** Tiền không chỉ để tiêu, tiền là **nguồn lực** để nâng cấp bản thân (như nguyên thạch giúp tu luyện). Hãy dùng tiền để mua những thứ giúp bạn kiếm được nhiều tiền hơn hoặc mạnh hơn, đừng chỉ dùng nó để thỏa mãn hư vinh. Phương Nguyên tiêu tiền mua rượu không phải để uống, mà là "chi phí đầu tư" cho dự án Tửu Trùng.
+
+## 33. Hiểu luật chơi của Tài sản và Thừa kế
+
+Phương Nguyên thắng thế ở đây vì hắn **thuộc luật** (Trưởng tử 16 tuổi được thừa kế).
+
+- **Bài học:** Trong bất kỳ tranh chấp nào (gia đình, công ty, hợp đồng), **Kiến thức về Luật pháp/Quy tắc** là vũ khí mạnh nhất. Đừng để tình cảm hay những lời hứa hẹn miệng (như "con trai ngoan của ta") làm mờ mắt. Hãy nhìn vào văn bản quy định quyền lợi thực sự của bạn.
+
+## 34. Cảnh giác với "Bữa trưa miễn phí" từ người thân
+
+Cậu Mợ đột nhiên cho tiền, nhận con nuôi, sửa phòng đẹp.
+
+- **Bài học:** Khi một người (kể cả người thân) bỗng dưng đối xử tốt bất thường với bạn, hãy đặt câu hỏi: _Họ muốn đổi lấy cái gì?_
+    
+- Phương Chính ngây thơ nghĩ đó là tình thương. Phương Nguyên biết đó là **phí bịt miệng** và **phí mua lại quyền thừa kế**. Trong các mối quan hệ lợi ích, không có gì là miễn phí.
+
+## 35. "Khổ trước sướng sau" vs "Sướng trước khổ sau"
+
+Phương Chính đang tận hưởng sự thoải mái trong "chiếc lồng", nhưng hắn đang dần mất đi khả năng tự lập và tư duy sắc bén. Phương Nguyên chịu khổ trong gió lạnh, nhưng mỗi bước đi của hắn đều hướng tới mục tiêu độc lập tài chính (di sản) và sức mạnh (kho báu).
+
+- **Bài học:** Sự thoải mái dễ dãi thường đi kèm với cái giá là **sự phụ thuộc**. Nếu bạn muốn làm chủ cuộc đời mình, hãy sẵn sàng bước ra khỏi vùng an toàn (căn phòng ấm áp) và đối mặt với gió lạnh. Chỉ có áp lực và sự thiếu thốn mới tôi rèn nên bản lĩnh thực sự.
+
+## 36. Phòng thủ trước các đòn "Bẩn" (Dirty Tricks)
+
+Phương Nguyên biết trước sẽ bị gài bẫy (mỹ nhân kế/vu oan).
+
+- **Bài học:** Khi bạn đang nắm giữ một lợi ích mà người khác thèm muốn (di sản, vị trí công việc), hãy chuẩn bị tinh thần cho những đòn tấn công bẩn thỉu nhất (bôi nhọ, gài bẫy, tin đồn). Cách phòng thủ tốt nhất là:
+    
+    1. Giữ khoảng cách với những "nhân tố rủi ro" (như Thẩm Thúy).
+        
+    2. Không tạo ra tình huống dễ bị hiểu lầm (Phương Nguyên luôn cảnh giác cao độ).
+        
+    3. Nắm thóp ngược lại đối thủ nếu có thể.
+

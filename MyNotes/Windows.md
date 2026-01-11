@@ -18,6 +18,7 @@
 - notepadplusplus
 - obs-studio
 - obsidian
+- miktex
 `scoop`
 scoop bucket add [main|versions|...]
 - main/chezmoi
