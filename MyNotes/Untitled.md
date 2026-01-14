@@ -42,3 +42,4 @@ The product is **defective** (bị lỗi). The left side does not work properly.
 I am very **dissatisfied** (không hài lòng) with this quality. Therefore, I would like to request a **full refund**.
 I look forward to hearing from you soon.
 **Sincerely,** Ngoc
+

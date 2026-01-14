@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CaoThang/C Sharp.md",
+                "file": "CaoThang/PT TKHT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C Sharp"
+              "title": "PT TKHT"
             }
           }
         ]
@@ -171,17 +171,18 @@
   },
   "active": "5ba1b5e7825ffbd5",
   "lastOpenFiles": [
+    "Windows.md",
+    "CaoThang/PT TKHT.md",
+    "Untitled.md",
+    "CaoThang/C Sharp.md",
     "CaoThang/TK GDNG.md",
     "Cổ Chân Nhân.md",
-    "Windows.md",
-    "CaoThang/C Sharp.md",
     "CaoThang/Python.md",
     "Món ăn.md",
     "CaoThang/Node.js.md",
     "Todos.md",
     "CaoThang",
     "Calis.md",
-    "Untitled.md",
     "Tip học tập.md",
     "Linux.md",
     "Đề Cương/HQTCSDL.md",
@@ -202,7 +203,6 @@
     "Đề Cương",
     "Mindmap - Stored Procedure.md",
     "How to Mindmap as a Beginner.md",
-    "().md",
     "Untitled.base",
     "Resources",
     "New folder",
